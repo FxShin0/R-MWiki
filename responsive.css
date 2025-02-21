@@ -12,6 +12,9 @@
   .statusfilter:hover {
     background-color: transparent !important;
   }
+  .selectedFilter {
+    background: #070a06;
+  }
 }
 
 @media (max-width: 620px) {
