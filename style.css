@@ -43,7 +43,7 @@ main {
   justify-content: center;
   align-items: center;
 }
-#portada {
+.portada {
   margin-top: 30px;
   width: 70%;
   max-width: 1200px;
@@ -167,6 +167,10 @@ main {
   margin-bottom: 5px;
 }
 
+.genderfilter,
+.statusfilter {
+  width: 180px;
+}
 .genderfilter:hover,
 .statusfilter:hover {
   background: var(--selectedFilter);
@@ -368,4 +372,8 @@ main {
 
 .showVis {
   opacity: 1;
+}
+
+.celu {
+  display: none;
 }

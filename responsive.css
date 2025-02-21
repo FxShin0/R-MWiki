@@ -4,6 +4,28 @@
   }
 }
 
+@media (hover: none) {
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+  .genderfilter:hover,
+  .statusfilter:hover {
+    background-color: transparent !important;
+  }
+}
+
+@media (max-width: 620px) {
+  .celu {
+    display: flex;
+  }
+  .pc {
+    display: none;
+  }
+  .portada {
+    height: 175px;
+  }
+}
+
 @media (max-width: 400px) {
   #searchText {
     width: 20%;

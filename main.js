@@ -210,15 +210,18 @@ function handleGender(event) {
       //si no estaba seleccionado anteriormente
       if (appState.genderFilter.gender !== event.target.dataset.gender) {
         gender.classList.add("selectedFilter");
+        event.target.innerHTML += "✔";
         appState.genderFilter.active = true;
         appState.genderFilter.gender = String(event.target.dataset.gender);
       } else {
         appState.genderFilter.active = false;
         appState.genderFilter.gender = null;
         gender.classList.remove("selectedFilter");
+        removeCheck(gender);
       }
     } else {
       gender.classList.remove("selectedFilter");
+      removeCheck(gender);
     }
   }
 }
@@ -234,18 +237,25 @@ function handleStatus(event) {
       if (appState.statusFilter.status !== event.target.dataset.status) {
         status.classList.add("selectedFilter");
         appState.statusFilter.active = true;
+        event.target.innerHTML += "✔";
         appState.statusFilter.status = String(event.target.dataset.status);
       } else {
         appState.statusFilter.active = false;
         appState.statusFilter.status = null;
+        removeCheck(status);
         status.classList.remove("selectedFilter");
       }
     } else {
+      removeCheck(status);
       status.classList.remove("selectedFilter");
     }
   }
 }
 
+function removeCheck(target) {
+  if (target.innerHTML.indexOf("✔"))
+    target.innerHTML = target.innerHTML.split("✔")[0];
+}
 function init() {
   fetchAndRender();
   nextPageBtn.addEventListener("click", nextAndPrevPageHandler);
