@@ -2,6 +2,15 @@
   #personajeTitle {
     font-size: 32px;
   }
+  .searchResults {
+    width: 80%;
+  }
+  .search {
+    width: 80%;
+  }
+  .portada {
+    width: 80%;
+  }
 }
 
 @media (hover: none) {
