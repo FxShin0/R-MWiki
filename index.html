@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rick and Morty | Info</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./responsive.css" />
+    <link rel="stylesheet" href="./animations.css" />
+    <!-- Datos de vista previa -->
+    <meta property="og:title" content="R&M Wiki" />
+    <meta property="og:URL" content="" />
+    <meta property="og:image" content="https://i.imgur.com/PSyPwf4.jpeg" />
+    <meta
+      property="og:description"
+      content="Todos los personajes de Rick y Morty a un solo click!"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="300" />
+    <meta property="og:image:height" content="300" />
+    <!-- Favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+  </head>
+  <body>
+    <header id="header">
+      <img
+        id="portada"
+        src="./assets/img/portada.png"
+        alt="Portada de pagina"
+      />
+    </header>
+    <main id="main">
+      <!-- Semanticamente esto seria incorrecto pero bueno jajas -->
+      <form class="search">
+        <h2 id="personajeTitle">Busca tu personaje!</h2>
+        <div class="searchBar">
+          <i class="fa-solid fa-magnifying-glass" id="lupaIcon"></i>
+          <input
+            type="text"
+            placeholder="Nombre de personaje..."
+            id="searchText"
+          />
+          <input type="submit" value="Buscar" id="searchBtn" />
+        </div>
+        <div class="searchFilters">
+          <h2 id="filtrosTitle">Filtros</h2>
+          <div class="filtersBtns">
+            <div class="genero filterBtn">
+              <p class="filterText">♐Género</p>
+              <ul class="filterMenu gender">
+                <li data-gender="male" class="genderfilter">🤵Hombre</li>
+                <li data-gender="female" class="genderfilter">👩Mujer</li>
+                <li data-gender="genderless" class="genderfilter">⭕Neutro</li>
+                <li data-gender="unknown" class="genderfilter">
+                  ❓Desconocido
+                </li>
+              </ul>
+            </div>
+            <div class="estado filterBtn">
+              <p class="filterText">👀Estado</p>
+              <ul class="filterMenu status">
+                <li data-status="alive" class="statusfilter">👍Vivo</li>
+                <li data-status="dead" class="statusfilter">👎Muerto</li>
+                <li data-status="unknown" class="statusfilter">
+                  ❓Desconocido
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </form>
+      <div class="searchResultsHeader">
+        <h2>Personajes:</h2>
+        <p>
+          Nota: La informacion esta en ingles porque la API tiene ese idioma.
+        </p>
+      </div>
+      <section class="searchResults"></section>
+      <div class="loadingScreen hide">
+        <img
+          class="loadingIcons vibrate-1"
+          src="./assets/img/loadingIcon.png"
+          alt="loadingIcon"
+        />
+        <img
+          class="loadingIcons vibrate-1"
+          src="./assets/img/loadingIcon.png"
+          alt="loadingIcon"
+        />
+        <img
+          class="loadingIcons vibrate-1"
+          src="./assets/img/loadingIcon.png"
+          alt="loadingIcon"
+        />
+      </div>
+      <section id="pages">
+        <i class="fa-solid fa-backward-step" id="bw"></i>
+        <p id="progressPages">
+          Page <span class="bold firstPage">2</span> of
+          <span class="bold lastPage">6</span>
+        </p>
+        <i class="fa-solid fa-forward-step" id="fw"></i>
+      </section>
+      <p class="popup hideVis">Hola</p>
+    </main>
+    <script src="./main.js"></script>
+  </body>
+</html>

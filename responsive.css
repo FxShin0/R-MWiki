@@ -1,0 +1,18 @@
+@media (max-width: 950px) {
+  #personajeTitle {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 400px) {
+  #searchText {
+    width: 20%;
+    min-width: 150px;
+  }
+  #lupaIcon {
+    font-size: 16px;
+  }
+  .popup {
+    font-size: 14px;
+  }
+}
